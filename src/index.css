@@ -23,26 +23,21 @@ body {
   flex: 0 0 60px;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   padding: 15px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #ccc;
 }
-
 /* Estilos para el ícono de Instagram */
 .instagram-icon {
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 90px;
 }
-
 /* Estilos para los elementos de la lista */
 .navbar-links {
   text-align: right;
 }
-
 .navbar-nav {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -53,14 +48,38 @@ body {
 }
 
 .nav-link {
-  color: #262626;
-  font-weight: bold;
+  font-weight: center;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+}
+.nav-link-content {
+  display: flex;
+  align-items: center;
+}
+.nav-link i {
+  margin-right: 10px;
+}
+/* Agregar una animación de empuje al pasar el cursor sobre los íconos */
+.nav-link .bi {
+  font-size: 26px;
+  transition: transform 0.2s ease-in-out;
+}
+/* Agregar una animación de empuje al pasar el cursor sobre los íconos */
+.nav-link:hover .bi {
+  transform: scale(1.1);
+}
+.nav-link:hover {
+  cursor: pointer;
+}
+.nav-link-content .bi {
+  font-size: 24px;
 }
 
-.nav-link:hover {
-  color: #405de6;
+.boton-ajuste {
+  display: flex;
+  align-items: center;
+  margin-top: 180px;
+  justify-content: flex-start start;
+  margin-left: 20px;
 }
 .ajustes-button {
   display: flex;
@@ -89,7 +108,36 @@ body {
 .ajustes-button:hover div:last-child {
   transform: rotate(-40deg);
 }
+/* Menu Configuracion */
+.menu-configuracion {
+  position: relative;
+  top: -100%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 20px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+}
 
+.menu-configuracion h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.menu-configuracion div {
+  margin-bottom: 10px;
+}
+
+.menu-configuracion label {
+  display: block;
+  font-weight: bold;
+}
 /*Estilos sugerencia de contacto*/
 .sugerencia-contactos {
   flex: 0 0 300px;
