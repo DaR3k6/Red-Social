@@ -2,26 +2,48 @@ import React from "react";
 
 const MenuConfiguracion = () => {
   return (
-    <>
-      <div className="menu-configuracion">
-        <h2>Configuración</h2>
-        <div className="setting-item">
-          <span>Idioma:</span>
-          <select>
-            <option value="es">Español</option>
-            <option value="en">Inglés</option>
-          </select>
-        </div>
-        <div className="setting-item">
-          <span>Notificaciones:</span>
-          <input type="checkbox" />
-        </div>
-        <div className="setting-item">
-          <span>Tema oscuro:</span>
-          <input type="checkbox" />
-        </div>
+    <div className="menu-configuracion">
+      <div className="menu-item">
+        <a className="menu-link active" href="!#">
+          <div className="menu-link-content">
+            <i className="bi bi-gear-wide"></i>
+            <span className="menu-link-text">Configuración</span>
+          </div>
+        </a>
       </div>
-    </>
+      <div className="menu-item">
+        <a className="menu-link active" href="!#">
+          <div className="menu-link-content">
+            <i className="bi bi-clock-history"></i>
+            <span className="menu-link-text">Tu actividad</span>
+          </div>
+        </a>
+      </div>
+      <div className="menu-item">
+        <a className="menu-link active" href="!#">
+          <div className="menu-link-content">
+            <i className="bi bi-bookmark"></i>
+            <span className="menu-link-text">Guardar</span>
+          </div>
+        </a>
+      </div>
+      <div className="menu-item">
+        <a className="menu-link active" href="!#">
+          <div className="menu-link-content">
+            <i className="bi bi-moon"></i>
+            <span className="menu-link-text">Cambiar aspecto</span>
+          </div>
+        </a>
+      </div>
+      <div className="menu-item">
+        <a className="menu-link active" href="!#">
+          <div className="menu-link-content">
+            <i className="bi bi-info-circle-fill"></i>
+            <span className="menu-link-text">Informar de un problema</span>
+          </div>
+        </a>
+      </div>
+    </div>
   );
 };
 

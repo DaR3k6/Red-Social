@@ -88,8 +88,8 @@ const BarraNavegacion = () => {
               <div className="div"></div>
               <div className="div"></div>
             </button>
-            {mostrarAjustes && <MenuConfiguracion />}
           </div>
+          {mostrarAjustes && <MenuConfiguracion />}
         </div>
       </div>
     </div>

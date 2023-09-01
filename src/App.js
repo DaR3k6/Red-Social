@@ -4,7 +4,7 @@ import SugerenciaContactos from "./components/sugerenciasContactos";
 function App() {
   return (
     <>
-      <div class="app-container">
+      <div className="app-container">
         <nav className="red-social-navbar">
           <BarraNavegacion />
         </nav>

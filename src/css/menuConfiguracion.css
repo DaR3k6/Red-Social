@@ -1,0 +1,72 @@
+/* Menu Configuracion */
+.menu-configuracion {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 49%;
+  left: 20px; /* Ajusta la distancia desde la izquierda según tus necesidades */
+  background-color: #fff;
+  padding: 20px; /* Reduje el espacio de padding para mostrar más opciones */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 220px; /* Reduje el ancho máximo para mostrar más opciones en una columna */
+  z-index: 1;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  margin-left: 0;
+  padding: 0;
+}
+
+.menu-link-text {
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.menu-link {
+  font-weight: center;
+  text-decoration: none;
+  color: #000;
+  margin-right: 10px;
+}
+
+.menu-link i {
+  margin-right: 10px;
+}
+
+.menu-link-content {
+  display: flex;
+  align-items: center;
+}
+
+.menu-link .bi {
+  font-size: 25px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-link:hover .bi {
+  transform: scale(1.1);
+}
+
+.menu-link:hover {
+  cursor: pointer;
+}
+
+.menu-link-content .bi {
+  font-size: 20px;
+}
