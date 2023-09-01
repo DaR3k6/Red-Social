@@ -17,17 +17,43 @@ const BarraNavegacion = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                Inicio
+                <i class="bi bi-house-door-fill">Inicio</i>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Notificaciones
+                <i class="bi bi-search">Buqueda</i>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Perfil
+                <i class="bi bi-compass">Explorar</i>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <i class="bi bi-camera-video-fill">Reels</i>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <i class="bi bi-heart">Notificaciones</i>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <i class="bi bi-plus-circle">Crear</i>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <i class="bi bi-messenger">Mensajes</i>
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <i class="bi bi-person-circle">Perfil</i>
               </a>
             </li>
           </ul>
