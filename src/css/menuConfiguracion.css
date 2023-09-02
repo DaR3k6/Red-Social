@@ -1,20 +1,27 @@
 /* Menu Configuracion */
 .menu-configuracion {
-  padding: 10px;
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 49%;
-  left: 20px; /* Ajusta la distancia desde la izquierda según tus necesidades */
+  top: 19%;
+  left: 20px;
   background-color: #fff;
-  padding: 20px; /* Reduje el espacio de padding para mostrar más opciones */
+  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-width: 220px; /* Reduje el ancho máximo para mostrar más opciones en una columna */
+  max-width: 300px;
   z-index: 1;
 }
-
+.menu-configuracion hr {
+  border: none;
+  border-top: 1px solid #000000;
+  margin: 10px 0;
+}
+.menu-item-button {
+  display: flex;
+  align-items: center;
+}
 .menu-nav {
   display: flex;
   flex-direction: column;
@@ -25,31 +32,35 @@
 }
 
 .menu-item {
-  margin-left: 0;
+  margin-left: 10px;
   padding: 0;
 }
 
 .menu-link-text {
+  flex: 1;
+  margin-left: 10px;
   max-width: 160px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .menu-link {
   font-weight: center;
   text-decoration: none;
   color: #000;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .menu-link i {
+  margin-left: 10px;
   margin-right: 10px;
 }
 
 .menu-link-content {
+  justify-content: space-between;
   display: flex;
   align-items: center;
 }

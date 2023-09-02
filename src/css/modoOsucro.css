@@ -1,0 +1,135 @@
+.oscuro-configuracion {
+  display: flex;
+  position: absolute;
+  top: 62%;
+  left: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.oscuro-menu {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.oscuro-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.oscuro-titulo span {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.oscuro-link-text i {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.oscuro-contenido {
+  padding: 20px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.oscuro-link-text {
+  flex: 1;
+  margin-left: 10px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  font-size: 30px;
+}
+.oscuro-contenido {
+  padding: 40px;
+}
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+.form-check-label {
+  margin-right: 14%;
+}
+.btn.bi-arrow-left-short {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* Estilos para el modo claro (por defecto) */
+.app-container {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Estilos para el modo oscuro */
+.modo-oscuro .app-container {
+  background-color: black;
+  color: white !important;
+}
+
+.modo-oscuro .red-social-navbar {
+  background-color: black;
+  color: #fff;
+}
+
+.modo-oscuro .sugerencia-contactos {
+  background-color: black;
+  color: #fff;
+}
+
+.modo-oscuro .boton-ajuste {
+  background-color: black;
+  color: #fff;
+}
+
+.modo-oscuro .ajustes-button {
+  background-color: black;
+}
+
+.modo-oscuro .menu-configuracion {
+  background-color: black;
+  color: #fff;
+}
+
+.modo-oscuro .oscuro-menu {
+  background-color: rgb(31, 30, 30);
+  color: #fff;
+}
+
+/* Cambiar color de texto a blanco en modo oscuro */
+.modo-oscuro p,
+.modo-oscuro h1,
+.modo-oscuro h2,
+.modo-oscuro h3,
+.modo-oscuro h4,
+.modo-oscuro h5,
+.modo-oscuro h6,
+.modo-oscuro span,
+.modo-oscuro a {
+  color: white !important;
+}
