@@ -1,5 +1,6 @@
 @import "./menuConfiguracion.css";
 @import "./modoOsucro.css";
+@import "./historialesCarusel.css";
 body {
   font-family: sans-serif;
   margin: 0;
@@ -16,8 +17,6 @@ body {
 .contenido-principal {
   flex: 2;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /*Estilos del navegador*/
