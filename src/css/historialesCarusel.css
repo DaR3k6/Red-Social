@@ -1,44 +1,79 @@
-.historales-wallpaper {
+.custom-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+.historiales-wallpaper {
   border-radius: 20px;
   padding: 20px;
-  width: 400px;
+  width: 500px;
   margin: 0 auto;
   text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
 }
 
+.historial-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  position: relative;
+  justify-content: flex-start;
+  margin-left: 10px;
+  margin-right: 20px;
+  max-width: 100%;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  font-size: 30px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: -35px;
+}
+.carousel-control-prev .bi,
+.carousel-control-next .bi {
+  color: #ffffff;
+  font-size: 25px;
+  transition: transform 0.2s ease-in-out;
+}
+.carousel-control-prev:hover .bi,
+.carousel-control-next:hover .bi {
+  color: #ffffff;
+  transform: scale(1.1);
+}
 .instagram-carousel {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 40px 0;
-  gap: 0px; /* Añadido espacio entre historias */
-  align-items: center; /* Centra verticalmente las historias */
+  gap: 20px;
 }
 
 .story {
-  border: 2px solid transparent; /* Agregado un borde para resaltar las historias */
+  border: 2px solid transparent;
   background-color: transparent;
   cursor: pointer;
-  margin: 0 10px; /* Espacio entre historias */
+  margin: 0 4px;
 }
 
 .story .perfil {
-  background: #ffffff; /* Fondo blanco */
+  background: #ffffff;
   box-sizing: border-box;
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  overflow: hidden; /* Oculta el desbordamiento de la imagen */
-  border: 2px solid #e1306c; /* Borde rojo */
+  overflow: hidden;
+  border: 2px solid #e1306c;
   margin-bottom: 6px;
 }
 
 .story .perfil img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen al contenedor */
+  object-fit: cover;
 }
 
 .story .titulo {

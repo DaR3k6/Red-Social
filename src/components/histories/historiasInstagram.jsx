@@ -1,58 +1,136 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
-const HistorialCarusel = () => {
-  const [activarEstado, setEstado] = useState(0);
+const HistorialCarousel = () => {
+  const [index, setIndex] = useState(0);
+  const [firstHalf, setFirstHalf] = useState(true);
 
-  const clickHistorial = index => {
-    setEstado(index);
+  const handleSelect = selectedIndex => {
+    setIndex(selectedIndex);
   };
 
-  const caruselEstado = (selectIndex, e) => {
-    if (e.type === "keydown" || e.type === "mousedown") {
-      e.preventDefault();
-    }
-    setEstado(selectIndex);
+  const toggleItems = () => {
+    setFirstHalf(!firstHalf);
   };
+  const items = [
+    {
+      username: "Juan",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      username: "María",
+      image: "https://picsum.photos/seed/picsum/200/300",
+    },
+  ];
+  // Divide los elementos en dos mitades
+  const middleIndex = Math.floor(items.length / 2);
+  const firstHalfItems = items.slice(0, middleIndex);
+  const secondHalfItems = items.slice(middleIndex, middleIndex + 8);
+
   return (
-    <>
-      <Carousel
-        activeIndex={activarEstado}
-        onSelect={caruselEstado}
-        interval={null}
-        controls={false}
-        wrap={false}
-      >
-        <Carousel.Item>
-          <div className="instagram-carousel">
-            <button
-              className={`story ${activarEstado === 0 ? "active" : ""}`}
-              onClick={() => clickHistorial(0)}
-            >
-              <div
-                className={`perfil ${activarEstado === 0 ? "active" : "empty"}`}
-              >
-                <img src="https://picsum.photos/seed/picsum/200/300" alt="" />
-              </div>
-              <div className="titulo">Juan</div>
-            </button>
-            <button
-              className={`story ${activarEstado === 0 ? "active" : ""}`}
-              onClick={() => clickHistorial(0)}
-            >
-              <div
-                className={`perfil ${activarEstado === 0 ? "active" : "empty"}`}
-              >
-                <img src="https://picsum.photos/seed/picsum/200/300" alt="" />
-              </div>
-              <div className="titulo">Juan</div>
-            </button>
-          </div>
-        </Carousel.Item>
-        {/* Agrega más elementos Carousel.Item según tus necesidades */}
-      </Carousel>
-    </>
+    <div className="historial-container">
+      <div className="carousel-container">
+        <button className="carousel-control-prev" onClick={toggleItems}>
+          <i className="bi bi-arrow-left-circle-fill"></i>
+        </button>
+        <Carousel
+          activeIndex={index}
+          interval={null}
+          onSelect={handleSelect}
+          controls={false}
+        >
+          <Carousel.Item>
+            <div className="custom-carousel">
+              {firstHalf
+                ? firstHalfItems.map((item, i) => (
+                    <div className="story" key={i}>
+                      <div className="perfil">
+                        <img src={item.image} alt={item.username} />
+                      </div>
+                      <div className="titulo">{item.username}</div>
+                    </div>
+                  ))
+                : secondHalfItems.map((item, i) => (
+                    <div className="story" key={i}>
+                      <div className="perfil">
+                        <img src={item.image} alt={item.username} />
+                      </div>
+                      <div className="titulo">{item.username}</div>
+                    </div>
+                  ))}
+            </div>
+          </Carousel.Item>
+        </Carousel>
+        <button className="carousel-control-next" onClick={toggleItems}>
+          <i className="bi bi-arrow-right-circle-fill"></i>
+        </button>
+      </div>
+    </div>
   );
 };
 
-export default HistorialCarusel;
+export default HistorialCarousel;

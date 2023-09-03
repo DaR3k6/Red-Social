@@ -96,6 +96,9 @@
   background-color: black;
   color: #fff;
 }
+.modo-oscuro .div {
+  background-color: #fff;
+}
 
 .modo-oscuro .sugerencia-contactos {
   background-color: black;
@@ -110,9 +113,10 @@
 .modo-oscuro .ajustes-button {
   background-color: black;
 }
-
 .modo-oscuro .menu-configuracion {
   background-color: black;
+}
+.modo-oscuro .menu-configuracion .btn {
   color: #fff;
 }
 
