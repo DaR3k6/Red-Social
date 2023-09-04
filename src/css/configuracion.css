@@ -1,0 +1,50 @@
+.custom-modal {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.informacion-perfil ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.informacion-perfil li {
+  margin-bottom: 17px;
+  margin-top: 2px;
+
+  border-bottom: 1px solid #ccc;
+}
+
+.informacion-perfil button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: inherit;
+}
+
+.informacion-perfil li:last-child {
+  border-bottom: none;
+}
+
+.informacion-perfil button.btn.btn-link-red {
+  color: rgb(231, 61, 61);
+}
+.informacion-perfil button.btn.btn-link {
+  color: rgb(0, 0, 0);
+}
+.btn.btn-link:active {
+  color: inherit; /* Hereda el color del texto del elemento padre */
+}
+.btn.btn-link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  border: none;
+}
+.btn.btn-link-red {
+  text-decoration: none;
+  color: rgb(231, 61, 61);
+  background-color: transparent;
+  border: none;
+}

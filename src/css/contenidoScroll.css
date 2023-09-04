@@ -69,16 +69,34 @@
 .publicacion-item {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinea los tres primeros botones a la izquierda */
+  justify-content: flex-start;
   margin-top: 10px;
 }
 
 .publicacion-guardar {
-  margin-left: auto; /* Coloca el cuarto botón en la derecha */
+  margin-left: auto;
 }
 .icono-grande {
   font-size: 25px;
   border: none;
   cursor: pointer;
   padding: 10px;
+}
+.icono-grande.liked .bi-heart {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#ff0000, #ff0000);
+  animation: bi-heart 0.5s infinite; /* Usa el nombre "bi-heart" para la animación */
+}
+
+/* Animación para mostrar el corazón */
+@keyframes bi-heart {
+  0%,
+  100% {
+    transform: scale(1); /* El corazón está en su tamaño normal */
+  }
+  50% {
+    transform: scale(1.2); /* Escala el corazón para simular el latido */
+  }
 }

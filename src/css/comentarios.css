@@ -1,0 +1,74 @@
+/* Estilos para la sección de comentarios */
+.comentarios {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  margin-top: 20px;
+}
+
+/* Estilos para el título "Comentarios" */
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #262626;
+  font-weight: bold;
+}
+
+/* Estilos para la lista de comentarios */
+.lista-comentarios {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilos para cada comentario */
+.lista-comentarios li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 10px;
+}
+
+/* Estilos para el área de comentario */
+#nuevo-comentario {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #e6e6e6;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #262626;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+/* Estilos para el botón "Publicar" */
+#formulario-comentario button {
+  background-color: transparent;
+  border: none;
+  color: #0095f6;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  margin-top: 1px;
+}
+
+/* Estilos para el botón "Publicar" al pasar el cursor sobre él */
+#formulario-comentario button:hover {
+  text-decoration: underline;
+}
+.textarea-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.textarea-container button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

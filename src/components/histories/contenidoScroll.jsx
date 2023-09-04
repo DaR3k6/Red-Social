@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import ConfiguracionPublicacion from "../configuracion/configuracion";
 
 const ContenidoScroll = () => {
+  //MODAL
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+  //ACUTALIZAR LOS ESTADOS DE DARLE LIKE
+  const [meGusta, setMeGusta] = useState(0);
+  const [like, setLike] = useState(false);
+  const MegustaLike = () => {
+    if (!like) {
+      setMeGusta(meGusta + 1);
+    } else {
+      setMeGusta(meGusta - 1);
+    }
+    console.log(like); // Verifica si el estado 'like' cambia
+
+    setLike(!like);
+  };
+
+  console.log(like ? "liked" : "");
   return (
     <>
       <div className="perfil-container">
@@ -15,7 +35,9 @@ const ContenidoScroll = () => {
               </div>
               <div className="titulo">Manuela</div>
               <div className="ajuste">
-                <i className="btn bi bi-three-dots mx-auto p-2 d-flex"></i>
+                <button className="icono-grande" onClick={handleShow}>
+                  <i className=" bi bi-three-dots"></i>
+                </button>
               </div>
             </div>
             <div className="publicacion">
@@ -25,8 +47,11 @@ const ContenidoScroll = () => {
               />
             </div>
             <div className="publicacion-item">
-              <button className="icono-grande">
-                <i className="bi bi-heart"></i>
+              <button
+                className={`icono-grande ${like ? "liked" : ""}`}
+                onClick={MegustaLike}
+              >
+                <i className={`bi bi-heart ${like ? "liked" : ""}`}></i>
               </button>
               <button className="icono-grande">
                 <i className="bi bi-chat"></i>
@@ -40,7 +65,28 @@ const ContenidoScroll = () => {
                 </button>
               </div>
             </div>
+            <p className="text-start">
+              {meGusta} <strong>Me gusta</strong>
+            </p>
+
+            <div className="comentarios mr-s">
+              <ul className="lista-comentarios">
+                <h1>Lista de comentarios</h1>
+              </ul>
+              <form id="formulario-comentario">
+                <div className="textarea-container">
+                  <textarea
+                    id="nuevo-comentario"
+                    placeholder="Añade un comentario..."
+                  ></textarea>
+                  <button type="submit" className="publicacion">
+                    Publicar
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
+          {<ConfiguracionPublicacion show={show} handleClose={handleClose} />}
         </div>
       </div>
     </>
