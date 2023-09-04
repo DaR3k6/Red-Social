@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 const HistorialCarousel = () => {
@@ -12,124 +12,123 @@ const HistorialCarousel = () => {
   const toggleItems = () => {
     setFirstHalf(!firstHalf);
   };
+
   const items = [
     {
       username: "Juan",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "perla",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
     {
-      username: "María",
-      image: "https://picsum.photos/seed/picsum/200/300",
-    },
-    {
-      username: "María",
-      image: "https://picsum.photos/seed/picsum/200/300",
-    },
-    {
-      username: "María",
+      username: "mario",
       image: "https://picsum.photos/seed/picsum/200/300",
     },
   ];
+
   // Divide los elementos en dos mitades
   const middleIndex = Math.floor(items.length / 2);
   const firstHalfItems = items.slice(0, middleIndex);
-  const secondHalfItems = items.slice(middleIndex, middleIndex + 8);
+  const secondHalfItems = items.slice(middleIndex);
 
   return (
-    <div className="historial-container">
-      <div className="carousel-container">
-        <button className="carousel-control-prev" onClick={toggleItems}>
-          <i className="bi bi-arrow-left-circle-fill"></i>
-        </button>
-        <Carousel
-          activeIndex={index}
-          interval={null}
-          onSelect={handleSelect}
-          controls={false}
-        >
-          <Carousel.Item>
-            <div className="custom-carousel">
-              {firstHalf
-                ? firstHalfItems.map((item, i) => (
-                    <div className="story" key={i}>
-                      <div className="perfil">
-                        <img src={item.image} alt={item.username} />
-                      </div>
-                      <div className="titulo">{item.username}</div>
-                    </div>
-                  ))
-                : secondHalfItems.map((item, i) => (
-                    <div className="story" key={i}>
-                      <div className="perfil">
-                        <img src={item.image} alt={item.username} />
-                      </div>
-                      <div className="titulo">{item.username}</div>
-                    </div>
-                  ))}
-            </div>
-          </Carousel.Item>
-        </Carousel>
-        <button className="carousel-control-next" onClick={toggleItems}>
-          <i className="bi bi-arrow-right-circle-fill"></i>
-        </button>
+    <>
+      {" "}
+      <div className="historales-wallperper">
+        <div className="historial-container">
+          <div className="carousel-container">
+            <button className="carousel-control-prev" onClick={toggleItems}>
+              <i className="bi bi-arrow-left-circle-fill"></i>
+            </button>
+            <Carousel
+              activeIndex={index}
+              interval={null}
+              onSelect={handleSelect}
+              controls={false}
+            >
+              <Carousel.Item>
+                <div className="custom-carousel">
+                  {firstHalf
+                    ? firstHalfItems.map((item, i) => (
+                        <div className="story" key={i}>
+                          <div className="perfil">
+                            <img src={item.image} alt={item.username} />
+                          </div>
+                          <div className="titulo">{item.username}</div>
+                        </div>
+                      ))
+                    : secondHalfItems.map((item, i) => (
+                        <div className="story" key={i}>
+                          <div className="perfil">
+                            <img src={item.image} alt={item.username} />
+                          </div>
+                          <div className="titulo">{item.username}</div>
+                        </div>
+                      ))}
+                </div>
+              </Carousel.Item>
+            </Carousel>
+            <button className="carousel-control-next" onClick={toggleItems}>
+              <i className="bi bi-arrow-right-circle-fill"></i>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

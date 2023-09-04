@@ -1,0 +1,84 @@
+.contenido-wallperper {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 100px;
+  text-align: center;
+  position: relative;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.container-perfil {
+  display: flex;
+  justify-content: center;
+  min-height: 10vh;
+}
+/*Perfil de la publicacion*/
+.perfil-container {
+  margin: -100px;
+  text-align: center;
+  position: relative;
+  justify-content: flex-start;
+  margin-left: 30px;
+  margin-right: 20px;
+  max-width: 100%;
+}
+.perfil-story {
+  margin-right: 20px;
+  margin-top: 1px;
+}
+.story-perfil {
+  border: 2px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0 4px;
+  display: flex;
+  align-items: center;
+}
+.story-perfil .perfil-story {
+  background: #ffffff;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #e1306c;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.ajuste {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 300px;
+  left: 21;
+}
+.publicacion {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 5px;
+}
+.publicacion img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.publicacion-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinea los tres primeros botones a la izquierda */
+  margin-top: 10px;
+}
+
+.publicacion-guardar {
+  margin-left: auto; /* Coloca el cuarto botón en la derecha */
+}
+.icono-grande {
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}

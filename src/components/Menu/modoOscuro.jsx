@@ -39,39 +39,42 @@ const ModoOscuro = () => {
   };
 
   return (
-    <div className="oscuro-configuracion">
-      {cerrarVentana && (
-        <div className="oscuro-menu">
-          <div className="oscuro-titulo">
-            <button
-              className="btn bi bi-arrow-left-short"
-              onClick={toggleVentana}
-            ></button>
-            <span className="oscuro-link-text">
-              Cambiar aspecto <i className="bi bi-moon"></i>
-            </span>
-          </div>
+    <>
+      {" "}
+      <div className="oscuro-configuracion">
+        {cerrarVentana && (
+          <div className="oscuro-menu">
+            <div className="oscuro-titulo">
+              <button
+                className="btn bi bi-arrow-left-short"
+                onClick={toggleVentana}
+              ></button>
+              <span className="oscuro-link-text">
+                Cambiar aspecto <i className="bi bi-moon"></i>
+              </span>
+            </div>
 
-          <div className="oscuro-contenido">
-            <div className="form-check form-switch form-check-reverse">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="flexSwitchCheckReverse"
-                checked={modOscuro}
-                onChange={toggleOscuro}
-              />
-              <label
-                className="form-check-label"
-                htmlFor="flexSwitchCheckReverse"
-              >
-                Modo Oscuro
-              </label>
+            <div className="oscuro-contenido">
+              <div className="form-check form-switch form-check-reverse">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckReverse"
+                  checked={modOscuro}
+                  onChange={toggleOscuro}
+                />
+                <label
+                  className="form-check-label"
+                  htmlFor="flexSwitchCheckReverse"
+                >
+                  Modo Oscuro
+                </label>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 

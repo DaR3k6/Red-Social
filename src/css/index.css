@@ -1,6 +1,7 @@
 @import "./menuConfiguracion.css";
 @import "./modoOsucro.css";
 @import "./historialesCarusel.css";
+@import "./contenidoScroll.css";
 body {
   font-family: sans-serif;
   margin: 0;
@@ -24,7 +25,7 @@ body {
   flex: 0 0 60px;
   display: flex;
   align-items: flex-start;
-  padding: 15px;
+  padding: 40px;
   border-right: 1px solid #ccc;
 }
 /* Estilos para el ícono de Instagram */
@@ -57,7 +58,7 @@ body {
   align-items: center;
 }
 .nav-link i {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 /* Agregar una animación de empuje al pasar el cursor sobre los íconos */
 .nav-link .bi {
@@ -78,7 +79,7 @@ body {
 .boton-ajuste {
   display: flex;
   align-items: center;
-  margin-top: 180px;
+  margin-top: 140px;
   justify-content: flex-start;
   margin-left: 20px;
 }
@@ -109,6 +110,17 @@ body {
 .ajustes-button:hover div:last-child {
   transform: rotate(-40deg);
 }
+/*Ajusto el contenido*/
+.historiales-wallpaper {
+  border-radius: 20px 20px 0 0; /* Redondea solo la parte superior */
+  padding: 20px;
+  width: 100%; /* Ocupa todo el espacio horizontal disponible */
+  text-align: center;
+  position: relative;
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  margin-bottom: 0; /*  /* Incluye el padding en el ancho total */
+}
+
 /*Estilos sugerencia de contacto*/
 .sugerencia-contactos {
   flex: 0 0 300px;
