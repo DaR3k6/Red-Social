@@ -4,6 +4,7 @@
 @import "./contenidoScroll.css";
 @import "./comentarios.css";
 @import "./configuracion.css";
+@import "./responisvo.css";
 body {
   font-family: sans-serif;
   margin: 0;

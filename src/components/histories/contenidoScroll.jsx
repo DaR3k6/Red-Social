@@ -2,25 +2,25 @@ import React, { useState } from "react";
 import ConfiguracionPublicacion from "../configuracion/configuracion";
 
 const ContenidoScroll = () => {
-  //MODAL
+  // MODAL
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
-  //ACUTALIZAR LOS ESTADOS DE DARLE LIKE
+
+  // ACTUALIZAR LOS ESTADOS DE DARLE LIKE
   const [meGusta, setMeGusta] = useState(0);
   const [like, setLike] = useState(false);
+
   const MegustaLike = () => {
     if (!like) {
       setMeGusta(meGusta + 1);
     } else {
       setMeGusta(meGusta - 1);
     }
-    console.log(like); // Verifica si el estado 'like' cambia
 
     setLike(!like);
   };
 
-  console.log(like ? "liked" : "");
   return (
     <>
       <div className="perfil-container">
@@ -36,7 +36,7 @@ const ContenidoScroll = () => {
               <div className="titulo">Manuela</div>
               <div className="ajuste">
                 <button className="icono-grande" onClick={handleShow}>
-                  <i className=" bi bi-three-dots"></i>
+                  <i className="bi bi-three-dots"></i>
                 </button>
               </div>
             </div>
@@ -50,8 +50,11 @@ const ContenidoScroll = () => {
               <button
                 className={`icono-grande ${like ? "liked" : ""}`}
                 onClick={MegustaLike}
+                style={{
+                  animation: like ? "heartbeat 0.6s infinite" : "",
+                }}
               >
-                <i className={`bi bi-heart ${like ? "liked" : ""}`}></i>
+                <i className="bi bi-heart"></i>
               </button>
               <button className="icono-grande">
                 <i className="bi bi-chat"></i>
@@ -79,7 +82,7 @@ const ContenidoScroll = () => {
                     id="nuevo-comentario"
                     placeholder="Añade un comentario..."
                   ></textarea>
-                  <button type="submit" className="publicacion">
+                  <button type="submit" className="btn btn-primary">
                     Publicar
                   </button>
                 </div>

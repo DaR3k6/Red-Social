@@ -1,0 +1,33 @@
+/* Estilos base para pantallas grandes (más de 1200px) */
+.contenido-principal {
+  margin-left: 200px;
+}
+
+/* Estilos para pantallas medianas (entre 768px y 1200px) */
+@media (max-width: 1200px) {
+  .contenido-principal {
+    margin-left: 100px;
+  }
+}
+
+/* Estilos para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Cambia a un diseño de columna en pantallas pequeñas */
+  }
+
+  .red-social-navbar {
+    display: none; /* Oculta la barra de navegación en pantallas pequeñas */
+  }
+}
+/* Estilos responsivos configuracion */
+@media (max-width: 768px) {
+  .menu-configuracion {
+    top: 10%; /* Ajusta la posición superior en pantallas más pequeñas */
+    left: 10px; /* Ajusta la posición izquierda en pantallas más pequeñas */
+  }
+
+  .menu-link {
+    font-size: 12px; /* Reduzca el tamaño de fuente en pantallas más pequeñas si es necesario */
+  }
+}

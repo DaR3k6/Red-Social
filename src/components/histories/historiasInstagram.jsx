@@ -99,6 +99,7 @@ const HistorialCarousel = () => {
               interval={null}
               onSelect={handleSelect}
               controls={false}
+              style={{ animation : }}
             >
               <Carousel.Item>
                 <div className="custom-carousel">

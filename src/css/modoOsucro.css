@@ -124,6 +124,32 @@
   background-color: rgb(31, 30, 30);
   color: #fff;
 }
+.modo-oscuro .contenido-wallperper {
+  background-color: rgb(31, 30, 30);
+  color: #fff;
+}
+
+.modo-oscuro .ajuste {
+  background-color: rgb(31, 30, 30);
+  color: #fff;
+}
+.modo-oscuro .publicacion-item {
+  background-color: rgb(31, 30, 30);
+  color: #fff;
+}
+.modo-oscuro .comentarios {
+  background-color: rgb(31, 30, 30);
+  color: #fff;
+}
+.modo-oscuro #formulario-comentario {
+  color: #fff;
+}
+.modo-oscuro textarea {
+  color: #fff !important;
+}
+.modo-oscuro .icono-grande {
+  color: #fff;
+}
 
 /* Cambiar color de texto a blanco en modo oscuro */
 .modo-oscuro p,

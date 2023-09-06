@@ -81,22 +81,35 @@
   border: none;
   cursor: pointer;
   padding: 10px;
-}
-.icono-grande.liked .bi-heart {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(#ff0000, #ff0000);
-  animation: bi-heart 0.5s infinite; /* Usa el nombre "bi-heart" para la animación */
+  background-color: transparent;
+  transition: color;
 }
 
-/* Animación para mostrar el corazón */
-@keyframes bi-heart {
+.icono-grande .bi-heart {
+  margin-right: 10px;
+}
+
+.icono-grande.liked .bi-heart {
+  color: #e1306c; /* Color del corazón cuando está "Me gusta" */
+}
+
+/* Estilo del contador de "Me gusta" */
+.icono-grande .contador-likes {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Estilo cuando se ha dado "Me gusta" */
+.icono-grande.liked .contador-likes {
+  background-color: #e1306c;
+  color: #e1306c;
+}
+@keyframes heartbeat {
   0%,
   100% {
-    transform: scale(1); /* El corazón está en su tamaño normal */
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.2); /* Escala el corazón para simular el latido */
+    transform: scale(1.2);
   }
 }
